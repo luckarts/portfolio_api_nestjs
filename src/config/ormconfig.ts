@@ -1,9 +1,9 @@
-//import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { config } from 'dotenv';
 config();
 //const dbConfig = config.get('db');
 
-const ormConfig = {
+const ormConfig: TypeOrmModuleOptions = {
   type: 'mysql',
   host: 'localhost',
   username: process.env.MYSQL_USER,

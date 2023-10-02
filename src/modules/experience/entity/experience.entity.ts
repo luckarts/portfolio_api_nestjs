@@ -1,9 +1,17 @@
-import { Column, Entity, Index, OneToMany } from 'typeorm';
-import { CustomBaseEntity } from 'src/common/entity/custom-base.entity';
+import {
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  Index,
+  OneToMany,
+} from 'typeorm';
 import { ExperienceDetailEntity } from 'experience_detail/entity/experience_detail.entity';
 
 @Entity({ name: 'experience' })
-export class ExperienceEntity extends CustomBaseEntity {
+export class ExperienceEntity {
+  @PrimaryGeneratedColumn()
+  id: number;
+
   @Column()
   date: string;
 

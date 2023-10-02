@@ -1,8 +1,19 @@
-import { Column, Entity, Index, ManyToMany, JoinTable } from 'typeorm';
-import { CustomBaseEntity } from 'src/common/entity/custom-base.entity';
+import {
+  Column,
+  PrimaryGeneratedColumn,
+  Entity,
+  Index,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
+import { Timestamps } from 'src/common/entity/Timestamps.entity';
 import { TagEntity } from 'tag/entity/tag.entity';
+
 @Entity({ name: 'project' })
-export class ProjectEntity extends CustomBaseEntity {
+export class ProjectEntity extends Timestamps {
+  @PrimaryGeneratedColumn()
+  id: number;
+
   @Column()
   img: string;
 
@@ -14,13 +25,13 @@ export class ProjectEntity extends CustomBaseEntity {
   })
   title: string;
 
-  @Column()
+  @Column({ type: 'text', nullable: true })
   description: string;
 
-  @Column()
+  @Column({ type: 'text', nullable: true })
   path_repo: string;
 
-  @Column()
+  @Column({ type: 'text', nullable: true })
   path_website: string;
 
   @Index({
