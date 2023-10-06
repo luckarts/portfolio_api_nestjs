@@ -44,11 +44,11 @@ export class ProjectEntity extends Timestamps {
   @JoinTable({
     name: 'project_tag',
     joinColumn: {
-      name: 'projectId',
+      name: 'project_id',
       referencedColumnName: 'id',
     },
     inverseJoinColumn: {
-      name: 'tagId',
+      name: 'tag_id',
       referencedColumnName: 'id',
     },
   })

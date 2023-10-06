@@ -1,12 +1,4 @@
-import {
-  Column,
-  Entity,
-  PrimaryGeneratedColumn,
-  JoinTable,
-  JoinColumn,
-  OneToOne,
-} from 'typeorm';
-import { CustomBaseEntity } from 'src/common/entity/custom-base.entity';
+import { Column, Entity, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
 import { UserProfileEntity } from 'src/modules/user_profile/entity/user_profile.entity';
 import { Timestamps } from 'src/common/entity/Timestamps.entity';
 

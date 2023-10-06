@@ -2,7 +2,13 @@
  * [Description ExperienceEntity]
  */
 
-import { Column, PrimaryGeneratedColumn, Entity, ManyToOne } from 'typeorm';
+import {
+  Column,
+  PrimaryGeneratedColumn,
+  JoinColumn,
+  Entity,
+  ManyToOne,
+} from 'typeorm';
 import { ExperienceEntity } from 'experience/entity/experience.entity';
 
 @Entity({ name: 'experience_detail' })
@@ -17,8 +23,6 @@ export class ExperienceDetailEntity {
     () => ExperienceEntity,
     (experience) => experience.experience_details,
   )
+  @JoinColumn({ name: 'experience_id' })
   experience: ExperienceEntity;
-
-  @Column()
-  experienceId: number;
 }

@@ -1,10 +1,4 @@
-import {
-  Column,
-  Entity,
-  PrimaryGeneratedColumn,
-  Index,
-  OneToMany,
-} from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { ExperienceDetailEntity } from 'experience_detail/entity/experience_detail.entity';
 
 @Entity({ name: 'experience' })
