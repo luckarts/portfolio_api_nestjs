@@ -9,7 +9,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { ProjectService } from 'experience/experience.service';
+import { ExperienceService } from 'experience/experience.service';
 import { AddExperienceDto } from 'experience/dto/add-experience.dto';
 import { ExperienceEntity } from 'experience/entity/experience.entity';
 import { UpdateExperienceDto } from 'experience/dto/update-experience-dto';
@@ -17,7 +17,7 @@ import { UpdateExperienceDto } from 'experience/dto/update-experience-dto';
 ApiTags('experiences');
 @Controller('experiences')
 export class ExperienceController {
-  constructor(private readonly experienceService: ProjectService) {}
+  constructor(private readonly experienceService: ExperienceService) {}
 
   @Get('/all')
   async getProjects() {

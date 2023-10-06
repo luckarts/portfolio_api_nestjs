@@ -6,7 +6,7 @@ import { AddExperienceDto } from 'experience/dto/add-experience.dto';
 import { UpdateExperienceDto } from 'experience/dto/update-experience-dto';
 
 @Injectable()
-export class ProjectService {
+export class ExperienceService {
   constructor(
     @InjectRepository(ExperienceEntity)
     private experienceRepository: Repository<ExperienceEntity>,
