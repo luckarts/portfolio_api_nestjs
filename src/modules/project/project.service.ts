@@ -12,7 +12,9 @@ export class ProjectService {
     private projectRepository: Repository<ProjectEntity>,
   ) {}
   async getProjects() {
-    return this.projectRepository.find();
+    return this.projectRepository.find({
+      relations: ['tags'],
+    });
   }
   async findById(id: number) {
     return this.projectRepository.findOne({ where: { id } });

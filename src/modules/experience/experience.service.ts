@@ -11,7 +11,7 @@ export class ExperienceService {
     @InjectRepository(ExperienceEntity)
     private experienceRepository: Repository<ExperienceEntity>,
   ) {}
-  async getProjects() {
+  async getExperiences() {
     return this.experienceRepository.find({
       relations: ['experience_details'],
     });
@@ -22,16 +22,18 @@ export class ExperienceService {
   async create(
     experienceDto: DeepPartial<AddExperienceDto>,
   ): Promise<ExperienceEntity> {
-    const newProject = this.experienceRepository.create({ ...experienceDto });
+    const newExperience = this.experienceRepository.create({
+      ...experienceDto,
+    });
     try {
-      await this.experienceRepository.save(newProject);
+      await this.experienceRepository.save(newExperience);
     } catch (e) {
       throw new HttpException(
-        'Le userName and password doivent etre unique',
+        'Error experience is not create',
         HttpStatus.BAD_REQUEST,
       );
     }
-    return newProject;
+    return newExperience;
   }
   async update(
     id: number,
@@ -39,24 +41,24 @@ export class ExperienceService {
   ): Promise<ExperienceEntity> {
     if (!this.findById(id)) {
       throw new HttpException(
-        'Le userName and password doivent etre unique',
+        "Cette experience Id n'existe pas",
         HttpStatus.BAD_REQUEST,
       );
     }
-    const updateProject = await this.experienceRepository.preload({
+    const updateExperience = await this.experienceRepository.preload({
       id,
       ...experienceDto,
     });
 
     try {
-      await this.experienceRepository.save(updateProject);
+      await this.experienceRepository.save(updateExperience);
     } catch (e) {
       throw new HttpException(
-        'Le userName and password doivent etre unique',
+        'error Experience not update',
         HttpStatus.BAD_REQUEST,
       );
     }
-    return updateProject;
+    return updateExperience;
   }
   async delete(id: number) {
     return await this.experienceRepository.delete(id);

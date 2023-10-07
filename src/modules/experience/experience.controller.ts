@@ -20,21 +20,21 @@ export class ExperienceController {
   constructor(private readonly experienceService: ExperienceService) {}
 
   @Get('/all')
-  async getProjects() {
-    return this.experienceService.getProjects();
+  async getExperiences() {
+    return this.experienceService.getExperiences();
   }
   @Get(':id')
-  async getProjetById(@Param('id') id: number) {
+  async getExperienceById(@Param('id') id: number) {
     return this.experienceService.findById(id);
   }
   @Post('/add')
-  async addProject(
+  async addExperience(
     @Body(ValidationPipe) experienceDto: AddExperienceDto,
   ): Promise<ExperienceEntity> {
     return this.experienceService.create(experienceDto);
   }
   @Put('/update/:id')
-  async updateProject(
+  async updateExperience(
     @Body(ValidationPipe) experienceDto: UpdateExperienceDto,
     @Param('id') id: number,
   ): Promise<ExperienceEntity> {
