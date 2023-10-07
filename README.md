@@ -2,25 +2,25 @@
 
 # Features
 
-- [x] Modélisation BDD
-- - [x] Définir les entité et les relations
+- [x] Database modeling
+- - [x] Modeling entities and their interrelationships
 -
-- [] Développement des modules
+- [] Module development
 
-  - [x] project Entity
-    - [x] create controleur Crud, Dto ,service,repository
+  - [x] Project Entity
+    - [x] create contrôleur Crud, Dto ,service,repository
     -
-  - [] tag Entity
-    - [] create controleur Crud, Dto ,service,repository
+  - [x] tag Entity
+    - [x] create contrôleur Crud, Dto ,service,repository
     -
   - [x] experience Entity
-    - [x] create controleur Crud, Dto ,service, repository
+    - [x] create contrôleur Crud, Dto ,service,repository
     -
   - [] experience_details Entity
     - [] create contrôleur Crud, Dto ,service, repository
     -
   - [] user Entity
-    - [] create controleur Crud, Dto ,service, repository
+    - [] create contrôleur Crud, Dto ,service, repository
     -
   - [] user_profile Entity
     - [] create contrôleur Crud, Dto ,service, repository
