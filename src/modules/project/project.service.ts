@@ -19,7 +19,7 @@ export class ProjectService {
   async findById(id: number) {
     return this.projectRepository.findOne({ where: { id } });
   }
-  async create(projectDto: DeepPartial<ProjectEntity>): Promise<ProjectEntity> {
+  async create(projectDto: DeepPartial<AddProjectDto>): Promise<ProjectEntity> {
     const newProject = this.projectRepository.create({ ...projectDto });
     try {
       await this.projectRepository.save(newProject);
@@ -33,7 +33,7 @@ export class ProjectService {
   }
   async update(
     id: number,
-    projectDto: DeepPartial<ProjectEntity>,
+    projectDto: DeepPartial<UpdateProjectDto>,
   ): Promise<ProjectEntity> {
     if (!this.findById(id)) {
       throw new HttpException(

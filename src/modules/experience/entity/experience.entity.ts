@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { ExperienceDetailEntity } from 'experience_detail/entity/experience_detail.entity';
+import { ExperienceDetailEntity } from 'experienceDetail/entity/experienceDetail.entity';
 
 @Entity({ name: 'experience' })
 export class ExperienceEntity {

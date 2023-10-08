@@ -22,7 +22,7 @@
       "project/*": ["src/modules/project/*"],
       "tag/*": ["src/modules/tag/*"],
       "experience/*": ["src/modules/experience/*"],
-      "experience_detail/*": ["src/modules/experience_detail/*"],
+      "experienceDetail/*": ["src/modules/experienceDetail/*"],
       "user/*": ["src/modules/user/*"],
       "user_profile/*": ["src/modules/user_profile/*"]
     }
