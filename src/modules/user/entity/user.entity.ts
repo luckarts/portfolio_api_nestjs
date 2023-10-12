@@ -1,5 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
-import { UserProfileEntity } from 'src/modules/user_profile/entity/user_profile.entity';
+import { UserProfileEntity } from 'src/modules/userProfile/entity/userProfile.entity';
 import { Timestamps } from 'src/common/entity/Timestamps.entity';
 
 @Entity('user')
