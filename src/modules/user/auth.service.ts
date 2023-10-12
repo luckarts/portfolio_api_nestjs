@@ -6,6 +6,7 @@ import { RegisterUserDto } from 'user/dto/create-user.dto';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { LoginUserDto } from 'user/dto/login-user.dto';
+
 const saltOrRounds = 10;
 
 @Injectable()

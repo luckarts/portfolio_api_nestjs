@@ -5,6 +5,7 @@ import {
   Post,
   Req,
   Res,
+  UseGuards,
   ValidationPipe,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
@@ -13,6 +14,7 @@ import { AuthService } from 'user/auth.service';
 import { ApiTags } from '@nestjs/swagger';
 import { RegisterUserDto } from 'user/dto/create-user.dto';
 import { LoginUserDto } from 'user/dto/login-user.dto';
+import { JwtStrategy } from 'user/local-auth.guard';
 
 @ApiTags('auth')
 @Controller()
@@ -26,7 +28,7 @@ export class AuthController {
   ) {
     return this.authService.create(registerUserDto);
   }
-
+  @UseGuards(JwtStrategy)
   @Post('/auth/login')
   async login(
     @Req()
