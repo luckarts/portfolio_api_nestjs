@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import * as ormConfig from 'src/config/ormconfig';
 import { ProjectModule } from 'project/project.module';
 import { ExperienceModule } from 'experience/experience.module';
-import { ExperienceDetailModule } from 'experienceDetail/experienceDetail.module';
+import { AuthModule } from 'user/user.module';
 
 import { TagModule } from 'tag/tag.module';
 
@@ -11,8 +11,8 @@ import { TagModule } from 'tag/tag.module';
   imports: [
     ProjectModule,
     ExperienceModule,
-    ExperienceDetailModule,
     TagModule,
+    AuthModule,
     TypeOrmModule.forRootAsync({ useFactory: () => ormConfig }),
   ],
 })
