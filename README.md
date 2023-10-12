@@ -16,11 +16,15 @@
   - [x] experience Entity
     - [x] create contrôleur Crud, Dto ,service,repository
     -
-  - [] experience_details Entity
-    - [] create contrôleur Crud, Dto ,service, repository
+  - [x] experience_details Entity
+    - [x] create contrôleur Crud, Dto ,service, repository
     -
-  - [] user Entity
+  - [x] user Entity
+
     - [] create contrôleur Crud, Dto ,service, repository
-    -
+    - [] too many try with same adresse ip
+    - [] send email forgot password
+    - [] refactoring
+
   - [] user_profile Entity
     - [] create contrôleur Crud, Dto ,service, repository
