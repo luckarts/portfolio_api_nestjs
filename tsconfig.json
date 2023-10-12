@@ -24,7 +24,7 @@
       "experience/*": ["src/modules/experience/*"],
       "experienceDetail/*": ["src/modules/experienceDetail/*"],
       "user/*": ["src/modules/user/*"],
-      "user_profile/*": ["src/modules/user_profile/*"]
+      "userProfile/*": ["src/modules/userProfile/*"]
     }
   }
 }
